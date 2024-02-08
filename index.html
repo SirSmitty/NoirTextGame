@@ -6,19 +6,29 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="script.js" defer></script>
+
+
 </head>
 
 <body>
+    <audio id="bg_music" src="Assets/sounds/backgroundJazz.mp3" autoplay loop></audio>
 
-    <div id="main" style="display:none">
-        <div id="game_text" style="font-size:100px"></div>
-        <div id="game_img"></div>
-        <button id="but_a" onclick="key_input('A');" style="font-size:100px">A</button>
-        <button id="but_b" onclick="key_input('B');" style="font-size:100px">B</button>
+    <div id="main" class="main-contents">
+        <div id="game_img" class="game_img"></div>
+        <div id="game_text" class="game_text">
+        </div>
+        <hr />
+        <div class="action_containers">
+            <div class="music-toggle">
+                <button id="musicButton" class="game_button" onclick="toggleSound()">Toggle Music</button>
+            </div>
+            <button id="but_a" onclick="key_input('A');" class="game_button">A</button>
+            <button id="but_b" onclick="key_input('B');" class="game_button">B</button>
+        </div>
     </div>
 
     <div id="splash" style="font-size:100px">Loading...<br>
-        <img src="mario.gif">
+        <img src="./Assets/StartScreen.gif">
     </div>
 
 </body>

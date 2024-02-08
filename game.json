@@ -2,7 +2,8 @@
     "start_state": "start",
     "states": {
         "start": {
-            "text": "Get out of my swamp!<br>Do you go in?<br>A = YES B = NO",
+            "text": "Remember: No Russian",
+            "image_change": "<img src=\"Assets/StartScreen.gif\">",
             "next_state": [
                 {
                     "state_name": "go_in_swamp_stim",

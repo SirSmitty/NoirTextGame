@@ -1,0 +1,122 @@
+@font-face {
+    font-family: PixeloidSans;
+    src: url(Assets/fonts/pixeloid-font/PixeloidSans-mLxMm.ttf) format(truetype);
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.main-contents {
+    width: 100vw;
+    height: 100vh;
+
+    background-color: black;
+}
+
+.game_img {
+    display: flex;
+    width: 100%;
+    height: 70%;
+}
+
+.game_img img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.game_text {
+    color: white;
+    font-family: 'PixeloidSans', sans-serif;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.action_containers {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    position: absolute;
+    width: 100%;
+    bottom: 50px;
+}
+
+.game_button {
+    font-family: 'PixeloidSans', sans-serif;
+    font-size: 40px;
+    padding: 10px 30px;
+    margin: 0 20px;
+    border: 5px solid white;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.game_button::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: white;
+    color: black;
+    transition: width 0.5s linear;
+    z-index: 0;
+}
+
+.game_button:hover::before {
+    width: 100%;
+}
+
+.game_button span {
+    position: relative;
+    z-index: 1;
+}
+
+.music-toggle {
+    position: absolute;
+    top: 10px;
+    /* Adjust as needed */
+    right: 10px;
+    /* Adjust as needed */
+}
+
+/* Style the button consistent with your game's theme */
+#musicButton {
+    font-family: 'PixeloidSans', sans-serif;
+    font-size: 20px;
+    /* Adjust as needed */
+    padding: 10px;
+    /* ...other styles... */
+}
+
+#but_a {
+    align-self: flex-start;
+}
+
+#but_b {
+    align-self: flex-end;
+}
+
+hr {
+    width: 80%;
+    /* or whatever width you prefer */
+    border: 0;
+    height: 1px;
+    background: white;
+    /* or any color that matches your design */
+    margin-top: 10px;
+    /* Decrease this to move the hr up towards the buttons */
+    margin-bottom: 30px;
+    /* Increase this to move the hr down away from the text */
+}

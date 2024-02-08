@@ -4,6 +4,27 @@ var current_state;
 var stim = 0;
 var points = 0;
 
+function startGame() {
+    // Hide the start game button
+    document.getElementById('startGameButton').style.display = 'none';
+
+    // Show the other buttons
+    document.getElementById('gameControls').style.display = 'block';
+
+}
+
+
+// This function toggles the music on and off
+function toggleSound() {
+    var audioEl = document.getElementById('bg_music');
+    if (audioEl.paused) {
+        audioEl.play();
+    } else {
+        audioEl.pause();
+    }
+}
+
+
 setTimeout(function () {
     $('#splash').hide();
     $('#main').show();
@@ -13,6 +34,7 @@ $.getJSON("game.json", function (data) {
     game_data = data;
     current_state = data['start_state'];
     $('#game_text').html(game_data['states'][data['start_state']]['text']);
+    $('#game_img').html(game_data['states'][data['start_state']]['image_change']);
 });
 
 function next_state(state) {
