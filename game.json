@@ -4,33 +4,385 @@
         "start": {
             "text": "Remember: No Russian",
             "image_change": "<img src=\"Assets/StartScreen.gif\">",
+            "button_labels": [
+                "Start Game"
+            ],
             "next_state": [
                 {
-                    "state_name": "go_in_swamp_stim",
+                    "state_name": "backstory-1",
                     "key_input": "A"
-                },
-                {
-                    "state_name": "kill",
-                    "key_input": "B"
                 }
             ]
         },
-        "go_in_swamp_stim": {
-            "next_state": [
-                "go_in_swamp"
+        "backstory-1": {
+            "text": "It is May 1, 1984 and with the looming collapse of the USSR your motherland and its people have become demoralized",
+            "image_change": "<img src=\"Assets/scenes/backstory1.jpg\">",
+            "button_labels": [
+                "CONTINUE"
             ],
-            "stim_change": 10,
-            "point_change": 1,
-            "image_change": "<img src=\"Assets/lord_farquaad_shirtless_by_shrek4ever69_d9ya24f-414w-2x.jpg\">"
+            "next_state": [
+                {
+                    "state_name": "backstory-2",
+                    "key_input": "A"
+                }
+            ],
+            "stim_change": 1,
+            "point_change": 0
         },
-        "go_in_swamp": {
-            "text": "YOU DIE!!! And are now SHrek Shoes! And Toilet paper!! ",
-            "next_state": "exit",
-            "dope_change": 1
+        "backstory-2": {
+            "text": "You are a Detective driving in a dark, forest through the russian countryside from from your hometown of Moscow",
+            "image_change": "<img src=\"Assets/scenes/backstory1.jpg\">",
+            "button_labels": [
+                "CONTINUE"
+            ],
+            "next_state": [
+                {
+                    "state_name": "backstory-3",
+                    "key_input": "A"
+                }
+            ],
+            "stim_change": 1,
+            "point_change": 0
         },
-        "kill": {
-            "next_state": "start",
-            "stim_change": 1
+        "backstory-3": {
+            "text": "In the far distance you see a city in the the distance. Although hard to notice from its lack of lights which you find odd",
+            "image_change": "<img src=\"Assets/scenes/backstory2.jpg\">",
+            "button_labels": [
+                "CONTINUE"
+            ],
+            "next_state": [
+                {
+                    "state_name": "backstory-4",
+                    "key_input": "A"
+                }
+            ],
+            "stim_change": 1,
+            "point_change": 0
+        },
+        "backstory-4": {
+            "text": "You head toward the Town however to ask for directions and perhaps stop for the night...",
+            "image_change": "<img src=\"Assets/scenes/backstory2.jpg\">",
+            "button_labels": [
+                "CONTINUE"
+            ],
+            "next_state": [
+                {
+                    "state_name": "barscene",
+                    "key_input": "A"
+                }
+            ],
+            "stim_change": 1,
+            "point_change": 0
+        },
+        "barscene": {
+            "text": "entering the city you notice a bar with a blinking LED Sign, do you enter?",
+            "image_change": "<img src=\"Assets/scenes/outdoorBar.jpg\">",
+            "button_labels": [
+                "YES",
+                "NO"
+            ],
+            "next_state": [
+                {
+                    "state_name": "insideBar",
+                    "key_input": "YES"
+                },
+                {
+                    "state_name": "headBackToTown",
+                    "key_input": "NO"
+                }
+            ],
+            "stim_change": 2,
+            "point_change": 0
+        },
+        "headBackToTown": {
+            "text": "You decide to head towards the Town instead to ask for directions and perhaps stop for the night...",
+            "image_change": "<img src=\"Assets/scenes/leavingBar.jpeg\">",
+            "button_labels": [
+                "CONTINUE"
+            ],
+            "next_state": [
+                {
+                    "state_name": "whereDoYouGo",
+                    "key_input": "CONTINUE"
+                }
+            ],
+            "stim_change": 2,
+            "point_change": 0
+        },
+        "insideBar": {
+            "text": "You pick up an Order given to the citizens to evacuate immediately with no explanation. \n Do you choose to drive away to saftey?",
+            "image_change": "<img src=\"Assets/scenes/barScene.jpg\">",
+            "button_labels": [
+                "YES",
+                "NO"
+            ],
+            "next_state": [
+                {
+                    "state_name": "cityCheckpoint",
+                    "key_input": "YES"
+                },
+                {
+                    "state_name": "whereDoYouGo",
+                    "key_input": "NO"
+                }
+            ],
+            "stim_change": 2,
+            "point_change": 0
+        },
+        "whereDoYouGo": {
+            "text": "Where do you Go!",
+            "image_change": "<img src=\"Assets/scenes/leavingBar.jpg\">",
+            "button_labels": [
+                "Large Reactor",
+                "Chernobyl Town Hall"
+            ],
+            "next_state": [
+                {
+                    "state_name": "largeReactor",
+                    "key_input": "Large Reactor"
+                },
+                {
+                    "state_name": "townHall",
+                    "key_input": "Town Hall"
+                }
+            ],
+            "stim_change": 2,
+            "point_change": 0
+        },
+        "cityCheckpoint": {
+            "text": "You get back into your car and decide too get out of town and abide by the mysterious note left at the bar!",
+            "image_change": "<img src=\"Assets/scenes/drivingToCity.jpg\">",
+            "button_labels": [
+                "CONTINUE"
+            ],
+            "next_state": [
+                {
+                    "state_name": "ranIntoMilitary",
+                    "key_input": "CONTINUE"
+                }
+            ],
+            "stim_change": 2,
+            "point_change": 0
+        },
+        "ranIntoMilitary": {
+            "text": "you Get Stopped by the Military on your way out and they take you into custody!",
+            "image_change": "<img src=\"Assets/scenes/drivingToCity.jpg\">",
+            "button_labels": [
+                "CONTINUE"
+            ],
+            "next_state": [
+                {
+                    "state_name": "interrogation",
+                    "key_input": "CONTINUE"
+                }
+            ],
+            "stim_change": 2,
+            "point_change": 0
+        },
+        "townHall": {
+            "text": "Entering into the town you find yourself in the midst of a command center.. surrounded by military commanders",
+            "image_change": "<img src=\"Assets/scenes/townHall.jpg\">",
+            "button_labels": [
+                "CONTINUE"
+            ],
+            "next_state": [
+                {
+                    "state_name": "interrogation",
+                    "key_input": "CONTINUE"
+                }
+            ],
+            "stim_change": 2,
+            "point_change": 0
+        },
+        "largeReactor": {
+            "text": "Entering into the perimeter of the facility you notice that it seems to be abandoned and extremely run down. however you become distracted because you start to hear a faint beeping...  ",
+            "image_change": "<img src=\"Assets/scenes/largeReactor.jpg\">",
+            "button_labels": [
+                "CONTINUE"
+            ],
+            "next_state": [
+                {
+                    "state_name": "giegerPickup",
+                    "key_input": "CONTINUE"
+                }
+            ],
+            "stim_change": 2,
+            "point_change": 0
+        },
+        "giegerPickup": {
+            "text": "You realize the beeping it coming from a giegercounter on the ground and you pick it up to it showing already dangerous levels of radiation \n What do you do?",
+            "image_change": "<img src=\"Assets/scenes/reactor1.jpg\">",
+            "button_labels": [
+                "Go Deeper",
+                "leave to saftey"
+            ],
+            "next_state": [
+                {
+                    "state_name": "deeper1",
+                    "key_input": "Go Deeper"
+                },
+                {
+                    "state_name": "cityCheckpoint",
+                    "key_input": "leave to saftey"
+                }
+            ],
+            "stim_change": 2,
+            "point_change": 0
+        },
+        "deeper1": {
+            "text": "As you walk further into the facility the beeper get louder. you find yourself in the control room of the facility.. completely empty",
+            "image_change": "<img src=\"Assets/scenes/reactor2.jpg\">",
+            "button_labels": [
+                "Go Deeper",
+                "leave to saftey"
+            ],
+            "next_state": [
+                {
+                    "state_name": "deeper2",
+                    "key_input": "Go Deeper"
+                },
+                {
+                    "state_name": "cityCheckpoint",
+                    "key_input": "leave to saftey"
+                }
+            ],
+            "stim_change": 2,
+            "point_change": 0
+        },
+        "deeper2": {
+            "text": "You find yourself in the reactor. the counter is alarming you of lethal radiation levels... \n You see your vision closing and you start to fade away...",
+            "image_change": "<img src=\"Assets/scenes/reactor3.jpg\">",
+            "button_labels": [
+                "End Game"
+            ],
+            "next_state": [
+                {
+                    "state_name": "RadiaitonGameOver",
+                    "key_input": "End Game"
+                }
+            ],
+            "stim_change": 2,
+            "point_change": 0
+        },
+        "RadiaitonGameOver": {
+            "text": "Died from Radiation exposure from the chernobyl plant",
+            "image_change": "<img src=\"Assets/scenes/radiationdeath.jpg\">",
+            "button_labels": [
+                "End Game"
+            ],
+            "next_state": [
+                {
+                    "state_name": "start",
+                    "key_input": "End Game"
+                }
+            ],
+            "stim_change": 2,
+            "point_change": 0
+        },
+        "interrogation": {
+            "text": "You find yourself in an interrogation room... \n [Soldier] : Why are you here?!",
+            "image_change": "<img src=\"Assets/scenes/interragationRoom.jpg\">",
+            "button_labels": [
+                "Im Lost!",
+                "What is going on here?"
+            ],
+            "next_state": [
+                {
+                    "state_name": "lost",
+                    "key_input": "Im Lost!"
+                },
+                {
+                    "state_name": "dependsOnAnswer",
+                    "key_input": "What are you going to do to me?"
+                }
+            ],
+            "stim_change": 2,
+            "point_change": 0
+        },
+        "lost": {
+            "text": "[Soldier] : Well We Do not trust you!",
+            "image_change": "<img src=\"Assets/scenes/interragationRoom.jpg\">",
+            "button_labels": [
+                "Game Over"
+            ],
+            "next_state": [
+                {
+                    "state_name": "start",
+                    "key_input": "Game Over"
+                }
+            ],
+            "stim_change": 2,
+            "point_change": 0
+        },
+        "dependsOnAnswer": {
+            "text": "This is the city of Chernobyl. Our nuclear power plant melted forcing the city to evacuate. you are a damage to the public due to radiation exposure and cannot be trusted. Unless you intend to stay to help us...",
+            "image_change": "<img src=\"Assets/scenes/interragationRoom.jpg\">",
+            "button_labels": [
+                "Im a Detective",
+                "I wont help you"
+            ],
+            "next_state": [
+                {
+                    "state_name": "chooseToHelp",
+                    "key_input": "Im a Detective"
+                },
+                {
+                    "state_name": "sayGoodbye",
+                    "key_input": "I wont help you"
+                }
+            ],
+            "stim_change": 2,
+            "point_change": 0
+        },
+        "sayGoodbye": {
+            "text": "You've been killed for not complying with the russian government",
+            "image_change": "<img src=\"Assets/scenes/sayGoodbye.jpg\">",
+            "button_labels": [
+                "END GAME"
+            ],
+            "next_state": [
+                {
+                    "state_name": "start",
+                    "key_input": "END GAME"
+                }
+            ],
+            "stim_change": 2,
+            "point_change": 0
+        },
+        "chooseToHelp": {
+            "text": "Will you help us fan the man in charge of the nuclear meltdown? He evacuated with the city and hid within the citizens",
+            "image_change": "<img src=\"Assets/scenes/interragationRoom.jpg\">",
+            "button_labels": [
+                "YES",
+                "NO"
+            ],
+            "next_state": [
+                {
+                    "state_name": "toBeContinued",
+                    "key_input": "YES"
+                },
+                {
+                    "state_name": "sayGoodbye",
+                    "key_input": "NO"
+                }
+            ],
+            "stim_change": 2,
+            "point_change": 0
+        },
+        "toBeContinued": {
+            "text": "Congradulations, you survived!!\n To be continued...",
+            "image_change": "<img src=\"Assets/scenes/toBeContinued.jpg\">",
+            "button_labels": [
+                "GAME OVER"
+            ],
+            "next_state": [
+                {
+                    "state_name": "start",
+                    "key_input": "GAME OVER"
+                }
+            ],
+            "stim_change": 2,
+            "point_change": 0
         }
     }
 }
